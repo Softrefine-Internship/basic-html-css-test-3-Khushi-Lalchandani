@@ -9,16 +9,18 @@ html {
   color: -#1a1a1a;
 }
 .main {
-  max-width: 80rem;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0); */
-  margin: 4.8rem;
+  max-width: 125rem;
+  box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  opacity: 1;
 }
 /* NAVIGATION SECTION */
 .header {
   background-image: url("bgimage.webp");
   z-index: -1;
   padding: 2.8rem;
-  width: 150%;
+  width: 100%;
 }
 .navigation {
   display: flex;
@@ -61,6 +63,11 @@ html {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.3),
     0 0 4px rgba(0, 0, 0, 0.2);
 }
+.nav-btn:hover {
+  cursor: pointer;
+  transform: translateY(-1.5%);
+  box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.1);
+}
 .nav-img {
   height: 4rem;
   width: 4rem;
@@ -70,6 +77,47 @@ html {
   font-size: 2.4rem;
   margin-top: 6px;
   color: #fefefe;
+  position: relative;
+}
+.notifications:hover {
+  cursor: pointer;
+  transform: translateY(-1.5%);
+  box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.1);
+}
+.complete:hover {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.01);
+  background-color: #f59d19;
+}
+.complete:hover,
+.covered1:hover,
+.bene1:hover,
+.icons:hover,
+.claim:hover,
+.text:hover,
+.dash-text:hover,
+.dash-icon:hover,
+.pay:hover,
+.nav-header:hover,
+.logo:hover,
+.num1:hover,
+.emergency1:hover,
+.activity:hover {
+  cursor: pointer;
+}
+.testimonial1:hover,
+.testimonial2:hover,
+.testimonial3:hover {
+  cursor: pointer;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1.2%);
+}
+.member1:hover,
+.activity:hover {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+.pay:hover {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.01);
+  background-color: #f59d19;
 }
 /* DETAILS SECTION */
 .details {
@@ -82,7 +130,8 @@ html {
   width: 15rem;
   border-radius: 5px;
   transform: translateY(50%);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.3),
+    0 0 4px rgba(0, 0, 0, 0.2);
 }
 .name {
   display: flex;
@@ -98,11 +147,63 @@ html {
 }
 .progress {
   display: flex;
-  height: 20rem;
-  width: 20rem;
-  background: inherit;
+  height: 15rem;
+  width: 30rem;
+  gap: 2.4rem;
+  align-items: center;
+  background-color: #c5bebe;
   margin-left: auto;
   border: 1px solid black;
+  opacity: 0.9;
+  border-radius: 7px;
+  padding: 2.4rem;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.circle {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  background: conic-gradient(#fca424 270deg, #777 0deg);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle::before {
+  content: "";
+  height: 7rem;
+  width: 7rem;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #bbb;
+}
+.circle2 {
+  position: absolute;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  color: #fff;
+}
+.text1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+  color: #fff;
+  font-weight: bolder;
+}
+.text2 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1.8rem;
+}
+.complete {
+  padding: 0.6rem;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  background-color: #fca424;
+  transition: all 0.3s;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.3),
+    0 0 4px rgba(0, 0, 0, 0.2);
 }
 /* BOTTOM SECTION */
 .bottom {
@@ -124,7 +225,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid gray;
+  border-bottom: 0.5px solid #ddd;
   margin-top: 5rem;
 }
 .fam {
@@ -137,12 +238,15 @@ html {
 .sub-bottom {
   padding: 2.4rem;
   grid-column: 1;
-  border-right: 1px solid gray;
+  width: 25rem;
+
+  border-right: 0.5px solid #ddd;
 }
 .covered,
 .beneficiary {
   display: flex;
   gap: 1rem;
+  margin-bottom: 3.2rem;
 }
 .covered1,
 .bene1,
@@ -170,13 +274,14 @@ html {
 /* NAVIGATION SECTION */
 .another {
   padding: 2.4rem;
+  box-sizing: border-box;
 }
 .nav {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 3.2rem;
-  border-bottom: 1px solid gray;
+  border-bottom: 0.5px solid #ddd;
 }
 .dash-icon {
   height: 1.6rem;
@@ -208,6 +313,13 @@ html {
   border: none;
   border-radius: 5px;
   width: 10%;
+  transition: all 0.3s;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.3),
+    0 0 4px rgba(0, 0, 0, 0.2);
+}
+.claim:hover {
+  cursor: pointer;
+  background-color: #02c994;
 }
 .logo1 {
   font-size: 1.4rem;
@@ -288,7 +400,7 @@ html {
   border-radius: 7px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: relative;
-  width: 55rem;
+  width: 65rem;
 }
 .member-img {
   height: 14rem;
@@ -336,6 +448,7 @@ html {
   bottom: 0;
   right: 0;
   transform: translate(-20%, -60%);
+  transition: all 0.3s;
 }
 /* ACTIVITY SECTION */
 .activity {
@@ -349,7 +462,7 @@ html {
   color: #bbb;
   font-weight: bold;
   padding: 1rem 0;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 0.5px solid #ddd;
   margin-bottom: 1.2rem;
 }
 .flex-activity {
