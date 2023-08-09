@@ -9,7 +9,7 @@ html {
   color: -#1a1a1a;
 }
 .main {
-  max-width: 150rem;
+  max-width: 80rem;
   /* box-shadow: 0 0 10px rgba(0, 0, 0); */
   margin: 4.8rem;
 }
@@ -98,10 +98,11 @@ html {
 }
 .progress {
   display: flex;
-  height: auto;
-  width: auto;
-  background: #000;
+  height: 20rem;
+  width: 20rem;
+  background: inherit;
   margin-left: auto;
+  border: 1px solid black;
 }
 /* BOTTOM SECTION */
 .bottom {
@@ -231,6 +232,7 @@ html {
   display: flex;
   gap: 1rem;
   border-radius: 10px;
+  width: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .claims,
@@ -263,6 +265,7 @@ html {
   color: #cdcdcd;
   font-weight: bolder;
   margin-bottom: 1.2rem;
+  letter-spacing: 1.2px;
 }
 .num1 {
   background-color: #0dd39d;
@@ -271,9 +274,12 @@ html {
 /* MEMBER'S SECTION */
 .member {
   display: flex;
+  flex-direction: column;
+  margin-top: 2.4rem;
+  gap: 1.8rem;
 }
-.member {
-  margin: 2.4rem;
+.members {
+  display: flex;
 }
 .member1 {
   display: flex;
@@ -281,6 +287,8 @@ html {
   padding: 1.8rem;
   border-radius: 7px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 55rem;
 }
 .member-img {
   height: 14rem;
@@ -310,4 +318,80 @@ html {
 .detail-text {
   font-size: 1.2rem;
   color: #777;
+}
+.pay {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fca424;
+  padding: 0.4rem;
+  border-radius: 4px;
+  color: #fefefe;
+  font-weight: bold;
+  text-transform: uppercase;
+  gap: 1rem;
+  border: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-20%, -60%);
+}
+/* ACTIVITY SECTION */
+.activity {
+  padding: 1.2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 2.4rem;
+  width: 25rem;
+}
+.activity-header {
+  font-size: 1.2rem;
+  color: #bbb;
+  font-weight: bold;
+  padding: 1rem 0;
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 1.2rem;
+}
+.flex-activity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+.blue-dot {
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 50%;
+  background-color: rgb(70, 128, 193);
+}
+.notify {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.activity-text {
+  color: #777;
+  font-size: 1.2rem;
+  margin-left: 1.8rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+.time {
+  color: #aaa;
+  margin-left: 1.8rem;
+}
+.activity1 {
+  padding: 1.2rem;
+  border-radius: 7px;
+}
+.green-dot {
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 50%;
+  background-color: #0dd39d;
+}
+.yellow-dot {
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 50%;
+  background-color: #fca424;
 }
